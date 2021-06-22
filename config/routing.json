@@ -5,6 +5,7 @@
     "/logout": "DefaultController:logout",
     "/token": "DefaultController:token",
     "/json": "DefaultController:getJSON",
+    "/dashboard": "DashboardController:dashboard",
     "/api/default":{
         "GET":"DefaultController:getDatasFromGET",
         "POST":"DefaultController:getDatasFromPOST",

@@ -1,8 +1,8 @@
 {
     "driver" : "mysql",
-    "host" : "localhost",
-    "port" : "3306",
-    "dbname" : "restologist",
+    "host" : "127.0.0.1",
+    "port" : "2409",
+    "dbname" : "rhmanagement",
     "username" : "root",
-    "password" : ""
+    "password" : "root"
 }
