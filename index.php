@@ -11,6 +11,7 @@
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./tailwind/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
 </head>
 
 <body class="bg-gray-100 font-family-karla flex">
@@ -22,6 +23,8 @@
     ?>
     <div class="w-full overflow-x-hidden border-t flex flex-col">
         <!-- INCLUDE TA PAGE POUR TESTER -->
+        <? include("./views/employees.php"); ?>
+        <? include('/var/www/html/views/dashboard.php');?>
         <? include("./template/footer.php"); ?>
     </div>
 
