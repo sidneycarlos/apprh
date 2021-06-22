@@ -24,6 +24,7 @@
     <div class="w-full overflow-x-hidden border-t flex flex-col">
         <!-- INCLUDE TA PAGE POUR TESTER -->
         <? include("./views/employees.php"); ?>
+        <? include('/var/www/html/views/dashboard.php');?>
         <? include("./template/footer.php"); ?>
     </div>
 
