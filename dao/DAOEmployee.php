@@ -1,7 +1,8 @@
 <?php
 namespace BWB\Framework\mvc\dao;
 use BWB\Framework\mvc\DAO;
-//en php 7 pour pouvoir utliser les methodes avec les (:) 
+use BWB\Framework\mvc\models\EmployeeModel;
+//en php 7 pour pouvoir utliser les methodes avec les (::) 
 use PDO;
 
 /*
@@ -28,9 +29,9 @@ class DAOEmployee extends DAO{
     public function getAll() {
         return $this->getPdo()->query(
             "SELECT * FROM employee"
-            )->fetchAll(PDO::FETCH_ASSOC);
+            )->fetchAll(PDO::FETCH_CLASS, EmployeeModel::class);
     }
-
+    
     public function getAllBy($filter) {
         
     }

@@ -1,31 +1,35 @@
 <?php
-namespace BWB\Framework\mvc\models;
-use BWB\Framework\mvc\UserInterface;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+namespace BWB\Framework\mvc\models;
+
 /**
  * Description of EmployeeModel
  *
  * @author loic
  */
-class EmployeeModel implements UserInterface{
-    public function getPassword() {
-        return "doe";
+class EmployeeModel {
+    private $firstname,$lastname;
+    
+    function getLastname() {
+        return $this->lastname;
     }
 
-    public function getRoles() {
-        return [
-            "admin",
-            "registered"
-        ];
+    function getFirstname() {
+        return $this->firstname;
     }
 
-    public function getUsername() {
-        return "john";
+    function setLastname($lastname) {
+        $this->lastname = $lastname;
     }
 
+    function setFirstname($firstname) {
+        $this->firstname = $firstname;
+    }
+
+    
 }

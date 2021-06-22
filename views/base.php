@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App RH</title>
-    <meta name="author" content="David Grzyb">
-    <meta name="description" content="">
-
-    <!-- Tailwind -->
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./tailwind/tailwind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
-</head>
-
-<body class="bg-gray-100 font-family-karla flex">
-
-    <!-- AJOUT DES INCLUDES -->
     <? include("./template/navigation.php"); ?>
     <? include("./template/header.php"); ?>
 
-    <div class="w-full overflow-x-hidden border-t flex flex-col">
-        <!-- INCLUDE TA PAGE POUR TESTER -->
-        <? include("./views/employees.php"); ?>
-        <? include('/var/www/html/views/dashboard.php'); ?>
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
+            <!-- INCLUDE TA PAGE POUR TESTER -->
+            <? include("./views/employees.php"); ?>
+            <? include('/var/www/html/views/dashboard.php'); ?>
 
-    <? include("./template/footer.php"); ?>
-    
+            <? include("./template/footer.php"); ?>
+        
+        </div>
     </div>
+
 
 
     <!-- AlpineJS -->

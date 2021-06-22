@@ -1,3 +1,25 @@
+<?php
+
+use BWB\Framework\mvc\dao\DAOEmployee;
+
+include("./template/header.php");
+include("./template/navigation.php");
+
+
+// $this->render("base", array(
+//     "template"=>$this->render("employees", array(
+//         "template"=>(new DAOEmployee())->getAll()
+//     ))
+// ));
+
+$employees = new DAOEmployee();
+$employees->getAll();
+
+echo "<pre>";
+var_dump($employees);
+echo "</pre>";
+?>
+
 <main class="w-full flex-grow p-6">
     <!-- INSÉRER SON CONTENU DANS LE MAIN -->
 
@@ -41,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+                <!-- <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
                     <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                         <div class="flex-auto p-4">
                             <div class="flex flex-wrap">
@@ -101,7 +123,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
@@ -113,3 +135,4 @@
     </div>
 
 </main>
+<? include("./template/footer.php");?>

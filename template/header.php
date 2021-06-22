@@ -1,4 +1,22 @@
-<div class="w-full flex flex-col h-screen overflow-y-hidden">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App RH</title>
+    <meta name="author" content="David Grzyb">
+    <meta name="description" content="">
+
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./tailwind/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+</head>
+
+<body class="bg-gray-100 font-family-karla flex">
+
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
