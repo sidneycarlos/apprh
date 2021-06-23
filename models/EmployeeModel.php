@@ -13,8 +13,10 @@ namespace BWB\Framework\mvc\models;
  * @author loic
  */
 class EmployeeModel {
-    private $firstname,$lastname;
+    private $id,$serial,$firstname,$lastname,$hire_date,$leave_date,$post,$mail,
+    $tel,$address,$available,$team_id,$gender,$avatar,$birthdate;
     
+    //GETTER
     function getLastname() {
         return $this->lastname;
     }
@@ -23,6 +25,16 @@ class EmployeeModel {
         return $this->firstname;
     }
 
+    function getPost() {
+        return $this->post;
+    }
+
+    function getAvatar(){
+        return $this->avatar;
+    }
+
+
+    //SETTER
     function setLastname($lastname) {
         $this->lastname = $lastname;
     }
@@ -31,5 +43,12 @@ class EmployeeModel {
         $this->firstname = $firstname;
     }
 
+    function setPost($post) {
+        $this->post = $post;
+    }
+
+    function setAvatar($avatar){
+        $this->avatar = $avatar;
+    }
     
-}
+} 
