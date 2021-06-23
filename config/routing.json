@@ -18,5 +18,6 @@
     "/files/upload-form":"DefaultController:getViewFiles",
     "/files/upload":{
         "POST": "DefaultController:uploadFiles"
-    }
+    },
+    "/employees":"EmployeeController:getEmployees"
 }
