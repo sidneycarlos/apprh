@@ -1,5 +1,5 @@
-
-    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+<!--HEADER-->
+<div class="w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
@@ -47,3 +47,6 @@
                 <i class="fas fa-plus mr-3"></i> New Report
             </button> -->
         </header>
+        <!--END HEADER-->
+
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
