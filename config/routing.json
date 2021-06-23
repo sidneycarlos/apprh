@@ -5,7 +5,6 @@
     "/logout": "DefaultController:logout",
     "/token": "DefaultController:token",
     "/json": "DefaultController:getJSON",
-    "/dashboard": "DashboardController:dashboard",
     "/api/default":{
         "GET":"DefaultController:getDatasFromGET",
         "POST":"DefaultController:getDatasFromPOST",
@@ -19,5 +18,7 @@
     "/files/upload":{
         "POST": "DefaultController:uploadFiles"
     },
-    "/employees":"EmployeeController:getEmployees"
+    "/dashboard": "DashboardController:dashboard",
+    "/employees":"EmployeeController:getEmployees",
+    "/operations":"OperationController:getOperations"
 }
