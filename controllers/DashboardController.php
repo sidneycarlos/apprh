@@ -15,7 +15,7 @@ class DashboardController extends Controller
 //retourne la vue dashboard.php
     public function dashboard() {
         $data = array(
-            "dashboard"=>(new DAODashboard())->getAll()
+            "dashboard"=>(new DAODashboard())->getSumEmployee()
         );
 
         $this->response->render("dashboard", $data);

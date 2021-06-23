@@ -1,5 +1,7 @@
 <?php
+
 namespace BWB\Framework\mvc\dao;
+
 use BWB\Framework\mvc\DAO;
 use BWB\Framework\mvc\models\OperationModel;
 //en php 7 pour pouvoir utliser les methodes avec les (::) 
@@ -16,35 +18,40 @@ use PDO;
  *
  * @author loic
  */
-class DAOOperation extends DAO{
+class DAOOperation extends DAO
+{
+    private $job;
+    private $nb;
     //put your code here
-    public function create($array) {
-        
+    public function create($array)
+    {
     }
 
-    public function delete($id) {
-        
+    public function delete($id)
+    {
     }
-//to modify
-    public function getAll() {
+    //to modify
+    public function getAll()
+    {
         return $this->getPdo()->query(
             "SELECT COUNT(employee_operation.operation_id)
             FROM mydb.employee_operation
             WHERE employee_operation.operation_id = 1;"
 
-            )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
+        )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
     }
+
     
-    public function getAllBy($filter) {
-        
+
+    public function getAllBy($filter)
+    {
     }
 
-    public function retrieve($id) {
-        
+    public function retrieve($id)
+    {
     }
 
-    public function update($array) {
-        
+    public function update($array)
+    {
     }
-
-} 
+}

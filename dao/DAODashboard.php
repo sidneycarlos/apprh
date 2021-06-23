@@ -1,5 +1,7 @@
 <?php
+
 namespace BWB\Framework\mvc\dao;
+
 use BWB\Framework\mvc\DAO;
 use PDO;
 /*
@@ -13,31 +15,66 @@ use PDO;
  *
  * @author loic
  */
-class DAODashboard extends DAO{
+class DAODashboard extends DAO
+{
     //put your code here
-    
-    public function create($array) {
-        
+
+    public function create($array)
+    {
     }
 
-    public function delete($id) {
-        
+    public function delete($id)
+    {
+    }
+    public function getAll()
+    {
     }
 
-    public function getAll() {
-        return $this->getPdo()->query("SELECT * FROM rhmanagement")->fetchAll(PDO::FETCH_ASSOC);
+    //somme des effectifs totaux
+    public function getSumEmployee()
+    {
+        return $this->getPdo()->query(
+            "SELECT COUNT(serial)
+            FROM rhmanagementdb.employee
+            WHERE serial !='';
+            "
+        )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\EmployeeModel");
     }
 
-    public function getAllBy($filter) {
-        
+    //somme des opérations non affectées/affectées
+    public function sumNonAffectedOperations()
+    {
+        return $this->getPdo($this->job, $this->nb)->query(
+            "SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = $this->job
+            AND employee_operation.present = $this->nb;" // A MOFIDIER
+
+        )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
     }
 
-    public function retrieve($id) {
-        
+    //somme des équipes
+    public function getTeamNumber()
+    {
+        return $this->getPdo()->query(
+            "SELECT COUNT(*)
+            FROM team;
+            "
+        )->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function update($array) {
-        
+
+
+    public function getAllBy($filter)
+    {
     }
 
+    public function retrieve($id)
+    {
+    }
+
+    public function update($array)
+    {
+    }
 }
