@@ -1,4 +1,4 @@
-<?php include 'test.php'?>
+<?php include 'chartdata.php'?>
 
 <h3>Répartition effectifs</h3>
 <canvas id="myChart"></canvas>
