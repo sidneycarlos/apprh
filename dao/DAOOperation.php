@@ -37,7 +37,7 @@ class DAOOperation extends DAO
     {
         return $this->getPdo()->query(
             "SELECT COUNT(employee_operation.operation_id)
-            FROM rhmanagement.employee_operation
+            FROM employee_operation
             WHERE employee_operation.operation_id = 1;"
 
         )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
