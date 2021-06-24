@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e220376ec53cbb4bfe215fbeceb40b40671548da',
+        'reference' => '879617ac2a93fec800173c83ccf088f1317b2625',
         'name' => 'beweb/php-mvc.bwb',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e220376ec53cbb4bfe215fbeceb40b40671548da',
+            'reference' => '879617ac2a93fec800173c83ccf088f1317b2625',
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -29,12 +29,12 @@
             'dev_requirement' => true,
         ),
         'firebase/php-jwt' => array(
-            'pretty_version' => 'v5.3.0',
-            'version' => '5.3.0.0',
+            'pretty_version' => 'v5.4.0',
+            'version' => '5.4.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../firebase/php-jwt',
             'aliases' => array(),
-            'reference' => '3c2d70f2e64e2922345e89f2ceae47d2463faae1',
+            'reference' => 'd2113d9b2e0e349796e72d2a63cf9319100382d2',
             'dev_requirement' => false,
         ),
         'guzzlehttp/guzzle' => array(

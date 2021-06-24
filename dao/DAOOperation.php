@@ -30,16 +30,19 @@ class DAOOperation extends DAO
     public function delete($id)
     {
     }
+    
+
     //to modify
     public function getAll()
     {
         return $this->getPdo()->query(
             "SELECT COUNT(employee_operation.operation_id)
-            FROM mydb.employee_operation
+            FROM rhmanagement.employee_operation
             WHERE employee_operation.operation_id = 1;"
 
         )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
     }
+    
 
     
 

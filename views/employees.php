@@ -5,8 +5,6 @@ use BWB\Framework\mvc\dao\DAOEmployee;
 include("./template/navigation.php");
 include("./template/header.php");
 
-$e = new DAOEmployee();
-$employees = $e->getAll();
 
 ?>
 
