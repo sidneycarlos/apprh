@@ -1,7 +1,12 @@
+<?php include 'test.php'?>
+
 <h3>Répartition effectifs</h3>
 <canvas id="myChart"></canvas>
 <div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
     <script>
         // Stockage des données dans un tableau associatif
         const data = {
@@ -12,7 +17,11 @@
             ],
             datasets: [{ //tableau associatif avec les propriétés du graphique type donut
                 label: 'Répartition des effectifs', //String => titre du graphique
-                data: [300, 50, 100], //liste => présents, congés, arrêts en chiffre (int)
+                <?php 
+                $pres = getEmployeePresent();
+                $abs = getEmployeeAbsent();
+                ?>
+                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], //liste => présents, congés, arrêts en chiffre (int)
                 backgroundColor: [ // liste => couleur des labels
                     'rgb(255, 99, 132)',
                     'rgb(54, 162, 235)',
