@@ -1,3 +1,11 @@
+<?php
+
+use BWB\Framework\mvc\dao\DAOEmployee;
+
+include("./template/navigation.php");
+include("./template/header.php");
+
+?>
 
 <main class="w-full flex-grow p-6">
     <!-- INSÉRER SON CONTENU DANS LE MAIN -->
@@ -11,3 +19,5 @@
     </div>
 </div>
 </main>
+
+<? include("./template/footer.php");?>
