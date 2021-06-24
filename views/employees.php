@@ -1,14 +1,6 @@
-<?php
 
-use BWB\Framework\mvc\dao\DAOEmployee;
-
-include("./template/navigation.php");
-include("./template/header.php");
-
-$e = new DAOEmployee();
-$employees = $e->getAll();
-
-?>
+<? include("./template/navigation.php"); ?>
+<? include("./template/header.php"); ?>
 
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
@@ -56,6 +48,7 @@ $employees = $e->getAll();
                         </div>
                     </div>
                 </div>
+                
                 <? endforeach ?>
 
             </div>
