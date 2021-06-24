@@ -1,4 +1,4 @@
-<?php include 'chartdata.php'?>
+<?php //include 'chartdata.php'?>
 
 <h3>Répartition effectifs</h3>
 <canvas id="myChart"></canvas>
@@ -12,20 +12,18 @@
         const data = {
             labels: [ //liste des intitulés: présents, congés, arrêts => légende
                 'Présents',
-                'Congés',
-                'Arrêts'
+                'Absents',
             ],
             datasets: [{ //tableau associatif avec les propriétés du graphique type donut
                 label: 'Répartition des effectifs', //String => titre du graphique
                 <?php 
-                $pres = getEmployeePresent();
-                $abs = getEmployeeAbsent();
+                //$pres = getEmployeePresent();
+                //$abs = getEmployeeAbsent();
                 ?>
-                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], //liste => présents, congés, arrêts en chiffre (int)
+                data: [<?//=$pres["count(present)"]?>5, 4<?//=$abs["count(present)"]?>], //liste => présents, absents (int)
                 backgroundColor: [ // liste => couleur des labels
                     'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)'
+                    'rgb(54, 162, 235)'                    
                 ],
                 hoverOffset: 10 //déplacement au passage de la souris
             }]
