@@ -7,12 +7,9 @@ include("./template/header.php");
 ?>
 
 <? 
-    // $daoOp = new DAOOperation();
-    // print_r($daoOp);
-    // $daoOp->getAll();
-    // $mysql = mysqli_fetch_assoc($daoOp);
-    // $arrUns = unserialize();
-    // print_r($daoOp);
+    $DAOStaff = new DAOOperation();
+    $presentStaffs = $DAOStaff->getPresentStaff();
+    $totalStaffs = $DAOStaff->getStaff();
 ?>
 
 
@@ -34,9 +31,8 @@ include("./template/header.php");
             </thead>
 
             <tbody class="text-gray-600 text-sm font-light">
-            <? foreach($operations as $operation): ?>
-
-              <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <? foreach($operations as $index => $operation): ?>
+              <tr class=" border-b border-gray-200 hover:bg-gray-100">
                 <td class="py-3 px-6 text-left whitespace-nowrap">
                   <div class="flex items-center">
                     <span class="font-medium"><?= $operation->getJob() ?></span>
@@ -48,16 +44,19 @@ include("./template/header.php");
                 <td class="py-3 px-6 text-center">
 
                 </td>
-
                 <td class="py-3 px-6 text-center">
-                  <span><?= $operation->getPresentOperation() ?>/46</span>
+                  <span>
+                    <?= $presentStaffs[$index]["presentStaff"] ?> /
+                  </span>
+                  <span>  
+                    <?= $totalStaffs[$index]["totalStaff"] ?>
+                  </span>
                 </td>
                 <td class="py-3 px-6 text-right">
-                  <button class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button>
+                  <a href="employees"><button class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button></a>
                 </td>
               </tr>
               <? endforeach ?>
-
             </tbody>
           </table>
         </div>

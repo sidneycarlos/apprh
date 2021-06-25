@@ -37,19 +37,70 @@ class DAOOperation extends DAO
     {
         return $this->getPdo()->query(
             "SELECT job
-            FROM operation
-            UNION
-            SELECT COUNT(employee_operation.operation_id)
-            FROM mydb.employee_operation
-            WHERE employee_operation.operation_id = 1
-            UNION
-            SELECT COUNT(employee_operation.present)
+            FROM operation"
+        )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
+    }
+
+    public function getPresentStaff()
+    {
+        return $this->getPdo()->query(
+            "SELECT COUNT(employee_operation.present) AS presentStaff
             FROM mydb.employee_operation
             INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
             WHERE operation.job = 'conception'
-            AND employee_operation.present = 1;"
+            AND employee_operation.present = 1
+            UNION ALL
+            SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = 'production'
+            AND employee_operation.present = 1
+            UNION ALL
+            SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = 'montage'
+            AND employee_operation.present = 1
+            UNION ALL
+            SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = 'conditionnement'
+            AND employee_operation.present = 1
+            UNION ALL
+            SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = 'preparateur'
+            AND employee_operation.present = 1;
+            "
+        )->fetchAll(PDO::FETCH_ASSOC);
+    }
 
-        )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
+    public function getStaff()
+    {
+        return $this->getPdo()->query(
+            "SELECT COUNT(employee_operation.operation_id) AS totalStaff
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 1
+            UNION ALL
+            SELECT COUNT(employee_operation.operation_id)
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 2
+            UNION ALL
+            SELECT COUNT(employee_operation.operation_id)
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 3
+            UNION ALL
+            SELECT COUNT(employee_operation.operation_id)
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 4
+            UNION ALL
+            SELECT COUNT(employee_operation.operation_id)
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 5;
+            "
+        )->fetchAll(PDO::FETCH_ASSOC);
     }
     
     public function getAllBy($filter)
