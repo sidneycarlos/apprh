@@ -14,16 +14,24 @@ namespace BWB\Framework\mvc\models;
  */
 class OperationModel {
     private $job;
+    private $present;
     
     //GETTER
     function getJob() {
         return $this->job;
     }
-
+    
+    function getPresentOperation() {
+        return $this->present;
+    }
     
     //SETTER
     function setJob($job) {
         $this->job = $job;
+    }
+
+    function setPresentOperation($present) {
+        $this->present = $present;
     }
 
     

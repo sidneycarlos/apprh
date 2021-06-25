@@ -36,16 +36,22 @@ class DAOOperation extends DAO
     public function getAll()
     {
         return $this->getPdo()->query(
-            "SELECT COUNT(employee_operation.operation_id)
-            FROM employee_operation
-            WHERE employee_operation.operation_id = 1;"
+            "SELECT job
+            FROM operation
+            UNION
+            SELECT COUNT(employee_operation.operation_id)
+            FROM mydb.employee_operation
+            WHERE employee_operation.operation_id = 1
+            UNION
+            SELECT COUNT(employee_operation.present)
+            FROM mydb.employee_operation
+            INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
+            WHERE operation.job = 'conception'
+            AND employee_operation.present = 1;"
 
         )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\OperationModel");
     }
     
-
-    
-
     public function getAllBy($filter)
     {
     }
