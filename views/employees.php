@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 <? include("./template/navigation.php"); ?>
 <? include("./template/header.php"); ?>
-<? include("./javascript/script.php"); ?>
-=======
-
-<? include("./template/navigation.php"); ?>
-<? include("./template/header.php"); ?>
->>>>>>> e2e618512de7b9adc6358cbbffa17a839b755e80
+<? include("./manipDom/script.php"); ?>
 
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
