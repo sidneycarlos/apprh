@@ -12,11 +12,11 @@ use PDO;
  */
 
 /**
- * Description of DAOEmployee
+ * Description of DAOStaff
  *
  * @author loic
  */
-class DAOEmployee extends DAO{
+class DAOStaff extends DAO{
     //put your code here
     public function create($array) {
         

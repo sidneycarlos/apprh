@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="relative w-auto pl-4 flex-initial">
                                     <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500 bg-auto"
-                                        style="background-image: url(<?= $employee->getAvatar() ?>)">
+                                        style="background-image: url(<?= $staff->getAvatar() ?>)">
                                     </div>
                                 </div>
                             </div>

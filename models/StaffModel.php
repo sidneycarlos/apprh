@@ -12,7 +12,7 @@ namespace BWB\Framework\mvc\models;
  *
  * @author loic
  */
-class EmployeeModel {
+class StaffModel {
     private $id,$serial,$firstname,$lastname,$hire_date,$leave_date,$post,$mail,
     $tel,$address,$available,$team_id,$gender,$avatar,$birthdate;
     
