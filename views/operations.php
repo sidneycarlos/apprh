@@ -1,10 +1,17 @@
 <?php
 
-use BWB\Framework\mvc\dao\DAOEmployee;
+use BWB\Framework\mvc\dao\DAOOperation;
 
 include("./template/navigation.php");
 include("./template/header.php");
 ?>
+
+<? 
+    $DAOStaff = new DAOOperation();
+    $presentStaffs = $DAOStaff->getPresentStaff();
+    $totalStaffs = $DAOStaff->getStaff();
+?>
+
 
 <main class="flex-grow p-6">
   <!-- INSÉRER SON CONTENU DANS LE MAIN -->
@@ -22,11 +29,13 @@ include("./template/header.php");
                 <th class="py-3 px-6 text-center"></th>
               </tr>
             </thead>
+
             <tbody class="text-gray-600 text-sm font-light">
-              <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <? foreach($operations as $index => $operation): ?>
+              <tr class=" border-b border-gray-200 hover:bg-gray-100">
                 <td class="py-3 px-6 text-left whitespace-nowrap">
                   <div class="flex items-center">
-                    <span class="font-medium">Conception</span>
+                    <span class="font-medium"><?= $operation->getJob() ?></span>
                   </div>
                 </td>
                 <td class="py-3 px-6 text-left">
@@ -35,14 +44,19 @@ include("./template/header.php");
                 <td class="py-3 px-6 text-center">
 
                 </td>
-
                 <td class="py-3 px-6 text-center">
-                  <span>38/46</span>
+                  <span>
+                    <?= $presentStaffs[$index]["presentStaff"] ?> /
+                  </span>
+                  <span>  
+                    <?= $totalStaffs[$index]["totalStaff"] ?>
+                  </span>
                 </td>
                 <td class="py-3 px-6 text-right">
-                  <button class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button>
+                  <a href="employees"><button class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button></a>
                 </td>
               </tr>
+              <? endforeach ?>
             </tbody>
           </table>
         </div>
