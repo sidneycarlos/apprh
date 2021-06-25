@@ -54,7 +54,7 @@ include("./template/header.php");
                   </span>
                 </td>
                 <td class="py-3 px-6 text-right">
-                  <a href="employees"><button class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button></a>
+                  <a href="employees"><button id="$index" class="bg-green-200 text-green-500 py-2 px-4 rounded text-xs">Compléter</button></a>
                 </td>
               </tr>
               <? endforeach ?>
@@ -66,3 +66,9 @@ include("./template/header.php");
   </div>
 </main>
 <? include("./template/footer.php"); ?>
+<script>
+  function getIdOperation() {
+    document.getElementById
+  }
+
+</script>
