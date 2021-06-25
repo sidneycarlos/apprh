@@ -1,4 +1,3 @@
-
 <? include("./template/navigation.php"); ?>
 <? include("./template/header.php"); ?>
 <? include("./javascript/script.php"); ?>
