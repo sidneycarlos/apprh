@@ -42,14 +42,14 @@ function getUncompleteOperations()
 
 function getSumEmployee()
 {
-    $sum = getDB()->query('SELECT COUNT(serial) FROM rhmanagement.mydb.employee WHERE serial !=\'\';')->fetch(PDO::FETCH_ASSOC);;
+    $sum = getDB()->query('SELECT count(serial) FROM rhmanagement.employee WHERE serial !=\'\';')->fetch(PDO::FETCH_ASSOC);
     return $sum;
     
 }
 
 function getTeamNb()
 {
-    $sum = getDB()->query('SELECT count(*) FROM team;')->fetch(PDO::FETCH_ASSOC);
-    return $sum;
+    $nbOfTeam = getDB()->query('SELECT count(*) FROM team;')->fetch(PDO::FETCH_ASSOC);
+    return $nbOfTeam;
     
 }

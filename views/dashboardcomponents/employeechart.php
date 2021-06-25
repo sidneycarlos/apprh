@@ -1,4 +1,4 @@
-<?php //include 'chartdata.php'?>
+<?php include_once 'dashboarddao.php'?>
 
 <h3>Répartition effectifs</h3>
 <canvas id="myChart"></canvas>
@@ -17,10 +17,10 @@
             datasets: [{ //tableau associatif avec les propriétés du graphique type donut
                 label: 'Répartition des effectifs', //String => titre du graphique
                 <?php 
-                //$pres = getEmployeePresent();
-                //$abs = getEmployeeAbsent();
+                $pres = getEmployeePresent();
+                $abs = getEmployeeAbsent();
                 ?>
-                data: [<?//=$pres["count(present)"]?>5, 4<?//=$abs["count(present)"]?>], //liste => présents, absents (int)
+                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], //liste => présents, absents (int)
                 backgroundColor: [ // liste => couleur des labels
                     'rgb(255, 99, 132)',
                     'rgb(54, 162, 235)'                    
