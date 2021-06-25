@@ -41,7 +41,7 @@
                             </div>
                             <p class="text-sm text-blueGray-400 mt-4">
                                 <p class="text-orange-500 mr-2">Disponible</p>
-                                <button onclick="removeCard()" id="affect" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
+                                <button onclick="removeCard()" id="affectBtn" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
                                     Affecter
                                 </button>
                             </p>

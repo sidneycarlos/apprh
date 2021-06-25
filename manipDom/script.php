@@ -1,10 +1,24 @@
 <?php
 
+$db = null;
 
 /**
- * Ajoute un employé à une tache, incrémente l'effectif sur l'opération
+ * @return /PDO
  */
-function addEmployeeToOperation(){
+function getDB(){
+    global $db;
+    $dsn = "mysql:dbname=mydb;host=172.17.0.1;port=3306";
+    if($db == null)
+        $db = new PDO($dsn, "root", "root");
+    return $db;
+}
+
+
+/**
+ * 
+ * @return id d'un employé
+ */
+function getEmployeeId(){
 
 }
 
@@ -14,16 +28,19 @@ function addEmployeeToOperation(){
  */
 ?>
 <script>
-document.getElementById("affect").addEventListener("click", function(){
-    function removeCard(){
-        var card = document.getElementById("card");
-        while(card.firstChild){
-        card.removeChild(card.firstChild);
+function removeCard(){
+    document.getElementById("affectBtn").addEventListener("click", function(){
+        function removeCard(){
+            var card = document.getElementById("card");
+            while(card.firstChild){
+            card.removeChild(card.firstChild);
+            }
         }
-    }
-    
-    removeCard();
-});
+        
+        
+    });
+}
+
 </script>
 <?
 
