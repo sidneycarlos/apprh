@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <? include("./template/navigation.php"); ?>
 <? include("./template/header.php"); ?>
 <? include("./javascript/script.php"); ?>
+=======
+
+<? include("./template/navigation.php"); ?>
+<? include("./template/header.php"); ?>
+>>>>>>> e2e618512de7b9adc6358cbbffa17a839b755e80
 
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
