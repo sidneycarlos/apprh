@@ -1,8 +1,8 @@
 {
     "driver" : "mysql",
     "host" : "172.17.0.1",
-    "port" : "2020",
-    "dbname" : "rhmanagement",
+    "port" : "3333",
+    "dbname" : "gestion-rh",
     "username" : "root",
     "password" : "root"
 }
