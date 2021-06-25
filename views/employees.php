@@ -1,16 +1,6 @@
 
-<<<<<<< HEAD
 <? include("./template/navigation.php"); ?>
 <? include("./template/header.php"); ?>
-=======
-use BWB\Framework\mvc\dao\DAOEmployee;
-
-include("./template/navigation.php");
-include("./template/header.php");
-
-
-?>
->>>>>>> dab3c3b5ad4db9ec4c67c6f92dd91ce1ea04bc72
 
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
