@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> c68bf86a7a7375323eb05f3374d3369df88c7197
 <!--HEADER-->
 <div class="w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->

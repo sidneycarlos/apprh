@@ -7,7 +7,7 @@ function getDB()
 {
     global $db;
     if (!$db instanceof \PDO) {
-        $dsn = 'mysql:dbname=rhmanagement;host=172.17.0.1:2020';
+        $dsn = 'mysql:dbname=mydb;host=172.17.0.1:3306';
         $user = 'root';
         $password = 'root';
 
@@ -18,22 +18,22 @@ function getDB()
 
 function getEmployeePresent()
 {
-    $present = getDB()->query('SELECT count(present) FROM rhmanagement.employee_operation WHERE employee_operation.present = 1;')->fetch(PDO::FETCH_ASSOC);
+    $present = getDB()->query('SELECT count(present) FROM mydb.employee_operation WHERE employee_operation.present = 1;')->fetch(PDO::FETCH_ASSOC);
     return $present;
 }
 
 
 function getEmployeeAbsent()
 {
-    $absent = getDB()->query('SELECT count(present) FROM rhmanagement.employee_operation WHERE employee_operation.present = 0;')->fetch(PDO::FETCH_ASSOC);
+    $absent = getDB()->query('SELECT count(present) FROM mydb.employee_operation WHERE employee_operation.present = 0;')->fetch(PDO::FETCH_ASSOC);
     return $absent;
 }
 
 function getUncompleteOperations()
 {
     $uncomplete = getDB()->query('SELECT count(employee_operation.present)
-    FROM rhmanagement.employee_operation
-    INNER JOIN rhmanagement.operation ON employee_operation.operation_id = operation.id
+    FROM mydb.employee_operation
+    INNER JOIN mydb.operation ON employee_operation.operation_id = operation.id
     WHERE employee_operation.present = 0;
     ')->fetch(PDO::FETCH_ASSOC);
     
@@ -42,7 +42,7 @@ function getUncompleteOperations()
 
 function getSumEmployee()
 {
-    $sum = getDB()->query('SELECT count(serial) FROM rhmanagement.employee WHERE serial !=\'\';')->fetch(PDO::FETCH_ASSOC);
+    $sum = getDB()->query('SELECT count(serial) FROM mydb.employee WHERE serial !=\'\';')->fetch(PDO::FETCH_ASSOC);
     return $sum;
     
 }
