@@ -6,7 +6,7 @@
                 </span>
             </footer>
         </div>
-
+        <!--END FOOTER-->
 
         <!-- AlpineJS -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -15,7 +15,7 @@
         <!-- ChartJS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 
-        <!--END FOOTER-->
+        
 </body>
 
 </html>

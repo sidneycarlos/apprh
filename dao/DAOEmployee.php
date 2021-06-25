@@ -28,7 +28,7 @@ class DAOEmployee extends DAO{
 
     public function getAll() {
         return $this->getPdo()->query(
-            "SELECT avatar, firstname, lastname, post, present
+            "SELECT employee.id, avatar, firstname, lastname, post, present
             FROM employee
             INNER JOIN employee_operation
             ON employee.id = employee_operation.employee_id

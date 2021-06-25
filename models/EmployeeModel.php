@@ -17,6 +17,11 @@ class EmployeeModel {
     $tel,$address,$available,$team_id,$gender,$avatar,$birthdate;
     
     //GETTER
+
+    function getId(){
+        return $this->id;
+    }
+
     function getLastname() {
         return $this->lastname;
     }
@@ -35,6 +40,11 @@ class EmployeeModel {
 
 
     //SETTER
+
+    function setId($id){
+        $this->id = $id;
+    }
+    
     function setLastname($lastname) {
         $this->lastname = $lastname;
     }

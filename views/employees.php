@@ -1,6 +1,7 @@
 
 <? include("./template/navigation.php"); ?>
 <? include("./template/header.php"); ?>
+<? include("./javascript/script.php"); ?>
 
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
@@ -18,7 +19,7 @@
             
                <? foreach($employees as $employee): ?>
 
-                <div class="w-full lg:w-6/12 xl:w-3/12 px-4 mb-8 mr-8">
+                <div id="<?$employee->getId()?>" class="w-full lg:w-6/12 xl:w-3/12 px-4 mb-8 mr-8">
                     <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                         <div class="flex-auto p-4">
                             <div class="flex flex-wrap">
@@ -35,13 +36,12 @@
                                 </div>
                                 <div class="relative w-auto pl-4 flex-initial">
                                     <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500">
-                                        <img src="<?= $employee->getAvatar() ?>"></img>
                                     </div>
                                 </div>
                             </div>
                             <p class="text-sm text-blueGray-400 mt-4">
-                                <button class="text-orange-500 mr-2">Disponible</button>
-                                <button type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
+                                <p class="text-orange-500 mr-2">Disponible</p>
+                                <button onclick="removeCard()" id="affect" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
                                     Affecter
                                 </button>
                             </p>
