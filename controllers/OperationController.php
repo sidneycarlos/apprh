@@ -26,5 +26,4 @@ class OperationController extends Controller{
             "operations"=>(new DAOOperation())->getAll()
         ));
     }
-
 }
