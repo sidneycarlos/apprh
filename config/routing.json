@@ -1,5 +1,5 @@
 {
-    "/": "DefaultController:getDefault",
+    "/": "DashboardController:dashboard",
     "/test": "DefaultController:test",
     "/login": "DefaultController:login",
     "/logout": "DefaultController:logout",
@@ -18,5 +18,7 @@
     "/files/upload":{
         "POST": "DefaultController:uploadFiles"
     },
-    "/employees":"EmployeeController:getEmployees"
+    "/dashboard": "DashboardController:dashboard",
+    "/employees":"EmployeeController:getEmployees",
+    "/operations":"OperationController:getOperations"
 }
