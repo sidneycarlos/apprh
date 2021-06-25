@@ -103,6 +103,16 @@ class DAOOperation extends DAO
         )->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    public function updateOperation($idOperation, $idEmployee)
+    {
+        return $this->getPdo()->query(
+            "UPDATE mydb.employee_operation
+            SET operation_id = $idOperation
+            WHERE employee_id = $idEmployee;            
+            "
+        )->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getAllBy($filter)
     {
     }

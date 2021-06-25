@@ -7,9 +7,10 @@ include("./template/header.php");
 ?>
 
 <? 
-    $DAOStaff = new DAOOperation();
-    $presentStaffs = $DAOStaff->getPresentStaff();
-    $totalStaffs = $DAOStaff->getStaff();
+    $DAO = new DAOOperation();
+    $presentStaffs = $DAO->getPresentStaff();
+    $totalStaffs = $DAO->getStaff();
+    $updateEmployee = $DAO->updateOperation();
 ?>
 
 
