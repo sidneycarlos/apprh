@@ -6,4 +6,3 @@ include("vendor/autoload.php");
 
 $r = new Routing();
 $r->execute();
- 
