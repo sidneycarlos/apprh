@@ -35,18 +35,31 @@
             options: {
                 layout: {
                     padding: 5
-                }
+                },
+                
             }
         };
+//modif
+        
 
+        
+        
+//end modif
         // === include 'setup' then 'config' above ===
 
-        var myChart = new Chart( //instanciation d'un objet Chart qui a 2 arguments
-            document.getElementById('myChart'),
-            config
-        );
-
-
+        //instanciation d'un objet Chart qui a 2 arguments
+        var myChart = new Chart(document.getElementById('myChart').getContext("2d"), config);
+        var ctx = document.getElementById("MyChart").onClick = function(evt) {
+            var activePoint = myChart.getElementAtEvent();
+        console.log(myChart);
+            if (activePoint.length > 0) {
+                var clickedDatasetIndex = activePoint[0]._datasetIndex;
+                var clickedElementindex = activePoint[0]._index;
+                var label = myChart.data.labels[clickedElementindex];
+                var value = myChart.data.datasets[clickedDatasetIndex].data[clickedElementindex];     
+                alert("Clicked: " + label + " - " + value);
+            }
+        }
         //resize de la taille du canvas: https://www.chartjs.org/docs/latest/configuration/responsive.html
 
         //myChart.canvas.parentNode.style.height = '500px';
