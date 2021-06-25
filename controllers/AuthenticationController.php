@@ -6,6 +6,7 @@ use BWB\Framework\mvc\models\MSUserModel;
 use BWB\Framework\mvc\MicrosoftProvider;
 use Microsoft\Graph\Graph;
 use Microsoft\Graph\Model;
+use BWB\Framework\mvc\Controller;
 use Exception;
 
 class AuthenticationController extends Controller{
@@ -25,7 +26,7 @@ class AuthenticationController extends Controller{
     public function logout()
     {
         $this->security->deactivate();
-        header("Location: http://" . $_SERVER['SERVER_NAME'] . "/login");
+        header("Location: http://localhost:9494/signin");
     }
 
 
@@ -67,7 +68,7 @@ class AuthenticationController extends Controller{
           $this->security->generateToken($user);
           // rediection vers la page demandée AVANT le processus de login
           session_start();
-          header("Location: http://localhost:45000".$_SESSION['REDIRECT_URL']);
+          header("Location: http://localhost:9494".$_SESSION['REDIRECT_URL']);
         }catch(League\OAuth2\Client\Provider\Exception\IdentityProviderException $e){
             //rediriger sur une page d'erreur
             

@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '54adaf2b07e4d5785eace51bf3d8a8c646672573',
+        'reference' => '5e11a7528b94c3d474cb460816a610a387bb07bf',
         'name' => 'beweb/php-mvc.bwb',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '54adaf2b07e4d5785eace51bf3d8a8c646672573',
+            'reference' => '5e11a7528b94c3d474cb460816a610a387bb07bf',
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -44,7 +44,7 @@
             'install_path' => __DIR__ . '/../guzzlehttp/guzzle',
             'aliases' => array(),
             'reference' => '9d4290de1cfd701f38099ef7e183b64b4b7b0c5e',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'guzzlehttp/promises' => array(
             'pretty_version' => '1.4.1',
@@ -53,7 +53,7 @@
             'install_path' => __DIR__ . '/../guzzlehttp/promises',
             'aliases' => array(),
             'reference' => '8e7d04f1f6450fef59366c399cfad4b9383aa30d',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(
             'pretty_version' => '1.8.2',
@@ -62,7 +62,25 @@
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
             'aliases' => array(),
             'reference' => 'dc960a912984efb74d0a90222870c72c87f10c91',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
+        ),
+        'league/oauth2-client' => array(
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/oauth2-client',
+            'aliases' => array(),
+            'reference' => 'badb01e62383430706433191b82506b6df24ad98',
+            'dev_requirement' => false,
+        ),
+        'microsoft/microsoft-graph' => array(
+            'pretty_version' => '1.12.0',
+            'version' => '1.12.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../microsoft/microsoft-graph',
+            'aliases' => array(),
+            'reference' => '8bcd1c3ebcb6dbd65713a180d85432eedb3faeed',
+            'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
             'pretty_version' => '1.7.0',
@@ -80,7 +98,7 @@
             'install_path' => __DIR__ . '/../paragonie/random_compat',
             'aliases' => array(),
             'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
             'pretty_version' => '1.0.1',
@@ -206,10 +224,10 @@
             'install_path' => __DIR__ . '/../psr/http-message',
             'aliases' => array(),
             'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'psr/http-message-implementation' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
             ),
@@ -221,7 +239,7 @@
             'install_path' => __DIR__ . '/../ralouphie/getallheaders',
             'aliases' => array(),
             'reference' => '120b605dfeb996808c31b6477290a714d356e822',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'sebastian/code-unit-reverse-lookup' => array(
             'pretty_version' => '1.0.2',
@@ -338,7 +356,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-idn',
             'aliases' => array(),
             'reference' => '4ad5115c0f5d5172a9fe8147675ec6de266d8826',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-intl-normalizer' => array(
             'pretty_version' => 'v1.19.0',
@@ -347,7 +365,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-normalizer',
             'aliases' => array(),
             'reference' => '8db0ae7936b42feb370840cf24de1a144fb0ef27',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-php70' => array(
             'pretty_version' => 'v1.19.0',
@@ -356,7 +374,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-php70',
             'aliases' => array(),
             'reference' => '3fe414077251a81a1b15b1c709faf5c2fbae3d4e',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-php72' => array(
             'pretty_version' => 'v1.19.0',
@@ -365,7 +383,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-php72',
             'aliases' => array(),
             'reference' => 'beecef6b463b06954638f02378f52496cb84bacc',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.1.3',

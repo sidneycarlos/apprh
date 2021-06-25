@@ -2,11 +2,11 @@
 
 namespace BWB\Framework\mvc\controllers;
 
-use BWB\Framework\mvc\Controller;
+use BWB\Framework\mvc\controllers\SecurizedController;
 use BWB\Framework\mvc\dao\DAOEmployee;
 
 
-class EmployeeController extends Controller{
+class EmployeeController extends SecurizedController{
 
 
     function __construct(){
