@@ -6,6 +6,6 @@
     <section class="flex justify-center">
     
     <?php $sumTeam = getSumEmployee()?>
-        <a class="text-9xl" href=""><?= $sumTeam["count(serial)"]?></a>
+        <a class="text-9xl" href="staff"><?= $sumTeam["count(serial)"]?></a>
     </section>
 </div>
