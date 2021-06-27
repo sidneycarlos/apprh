@@ -28,9 +28,12 @@ class DAOEmployee extends DAO{
 
     public function getAll() {
         return $this->getPdo()->query(
-            "SELECT *
-            FROM employee;
-            "
+            "SELECT avatar, firstname, lastname, post, present
+            FROM mydb.employee
+            INNER JOIN employee_operation
+            ON mydb.employee.id = employee_operation.employee_id
+            WHERE employee_operation.present = 1
+            ;"
             )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\EmployeeModel");
     }
     
