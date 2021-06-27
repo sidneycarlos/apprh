@@ -10,18 +10,18 @@
     <script>
         // Stockage des données dans un tableau associatif
         const data = {
-            labels: [ //liste des intitulés: présents, congés, arrêts => légende
+            labels: [ //liste des intitulés: présents, congés => légende
                 'Présents',
                 'Absents',
             ],
-            datasets: [{ //tableau associatif avec les propriétés du graphique type donut
+            datasets: [{ //tableau associatif avec les propriétés du graphique type doughnut
                 label: 'Répartition des effectifs', //String => titre du graphique
                 <?php 
-                $pres = getEmployeePresent();
-                $abs = getEmployeeAbsent();
+                $pres = getEmployeePresent();//liste : somme des employés présents
+                $abs = getEmployeeAbsent();//liste : somme des employés absents
                 ?>
-                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], //liste => présents, absents (int)
-                backgroundColor: [ // liste => couleur des labels
+                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], 
+                backgroundColor: [ // couleur des labels
                     'rgb(255, 99, 132)',
                     'rgb(54, 162, 235)'                    
                 ],
@@ -35,18 +35,31 @@
             options: {
                 layout: {
                     padding: 5
-                }
+                },
+                
             }
         };
+//modif
+        
 
+        
+        
+//end modif
         // === include 'setup' then 'config' above ===
 
-        var myChart = new Chart( //instanciation d'un objet Chart qui a 2 arguments
-            document.getElementById('myChart'),
-            config
-        );
-
-
+        //instanciation d'un objet Chart qui a 2 arguments
+        var myChart = new Chart(document.getElementById('myChart').getContext("2d"), config);
+        var ctx = document.getElementById("MyChart").onClick = function(evt) {
+            var activePoint = myChart.getElementAtEvent();
+        console.log(myChart);
+            if (activePoint.length > 0) {
+                var clickedDatasetIndex = activePoint[0]._datasetIndex;
+                var clickedElementindex = activePoint[0]._index;
+                var label = myChart.data.labels[clickedElementindex];
+                var value = myChart.data.datasets[clickedDatasetIndex].data[clickedElementindex];     
+                alert("Clicked: " + label + " - " + value);
+            }
+        }
         //resize de la taille du canvas: https://www.chartjs.org/docs/latest/configuration/responsive.html
 
         //myChart.canvas.parentNode.style.height = '500px';

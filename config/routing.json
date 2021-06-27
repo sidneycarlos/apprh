@@ -20,5 +20,7 @@
     },
     "/dashboard": "DashboardController:dashboard",
     "/employees":"EmployeeController:getEmployees",
-    "/operations":"OperationController:getOperations"
+    "/operations":"OperationController:getOperations",
+    "/teams":"TeamController:getTeams",
+    "/staff":"StaffController:getStaff"
 }
