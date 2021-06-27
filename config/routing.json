@@ -21,5 +21,6 @@
     "/dashboard": "DashboardController:dashboard",
     "/employees":"EmployeeController:getEmployees",
     "/operations":"OperationController:getOperations",
-    "/teams":"TeamController:getTeams"
+    "/teams":"TeamController:getTeams",
+    "/staff":"StaffController:getStaff"
 }
