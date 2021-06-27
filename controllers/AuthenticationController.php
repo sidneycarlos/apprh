@@ -26,7 +26,7 @@ class AuthenticationController extends Controller{
     public function logout()
     {
         $this->security->deactivate();
-        header("Location: http://localhost:9494/signin");
+        header("Location: http://localhost:9494/dashboard");
     }
 
 
