@@ -24,7 +24,7 @@
             <a href="dashboard" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">APP RH</a>
         </div>
         <nav class="text-white text-base font-semibold pt-3">
-            <a href="dashboard" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="dashboard" class="flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
@@ -36,10 +36,7 @@
                 <i class="fas fa-users mr-3"></i>
                 Équipes
             </a>
-            <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                <i class="fas fa-calendar mr-3"></i>
-                Planning
-            </a>
+            
         </nav>
 
     </aside>
