@@ -22,8 +22,8 @@
                 ?>
                 data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], 
                 backgroundColor: [ // couleur des labels
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)'                    
+                    'rgb(54, 162, 235)',
+                    'rgb(255,187,51)'                    
                 ],
                 hoverOffset: 10 //déplacement au passage de la souris
             }]

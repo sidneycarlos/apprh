@@ -1,8 +1,9 @@
 <?php include_once 'dashboarddao.php'?>
 
-<h3 class="title">Effectif total</h3>
+<h3 class="title pb-0">Effectif total</h3>
 
-<div width="300" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 300px;">
+<div class="pb-0 pt-20 mb-0" width="300" height="300" style="display: block; height: 300px; width: 300px;">
+
     <section class="flex justify-center">
     
     <?php $sumTeam = getSumEmployee()?>
