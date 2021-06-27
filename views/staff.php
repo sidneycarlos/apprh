@@ -5,6 +5,9 @@
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
 <main class="w-full flex-grow p-6">
+
+<div class="text-left"><p class="text-3xl ...">Employé(s) disponible(s) </p><br>
+</div>
     
     <!-- Big container -->
     <div class="text-blueGray-700 antialiased">
@@ -41,9 +44,9 @@
                             </div>
                             <p class="text-sm text-blueGray-400 mt-4">
                                 <!--button class="text-orange-500 mr-2">Disponible</button-->
-                                <button type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
+                                <!-- <button type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
                                     Créer employé
-                                </button>
+                                </button> -->
                             </p>
                         </div>
                     </div>
