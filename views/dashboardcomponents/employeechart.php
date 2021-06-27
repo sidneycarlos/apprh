@@ -35,6 +35,9 @@
             options: {
                 layout: {
                     padding: 5
+                },
+                onClick: function(arg){
+                    console.log("it works", arg);
                 }
             }
         };
