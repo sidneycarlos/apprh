@@ -39,12 +39,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-sm text-blueGray-400 mt-4">
-                                <!--button class="text-orange-500 mr-2">Disponible</button-->
-                                <button type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
-                                    Créer employé
-                                </button>
-                            </p>
+                            
                         </div>
                     </div>
                 </div>
