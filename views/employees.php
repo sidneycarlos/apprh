@@ -5,7 +5,7 @@
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
 <main class="w-full flex-grow p-6">
-    
+<h1 class="text-4xl text-black mb-10">Employés disponibles</h1>
     <!-- Big container -->
     <div class="text-blueGray-700 antialiased">
         
