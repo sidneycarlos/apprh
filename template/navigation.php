@@ -32,7 +32,7 @@
                 <i class="fas fa-user-tie mr-3"></i>
                 Employés
             </a>
-            <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="teams" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-users mr-3"></i>
                 Équipes
             </a>
