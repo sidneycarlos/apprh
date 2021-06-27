@@ -10,18 +10,18 @@
     <script>
         // Stockage des données dans un tableau associatif
         const data = {
-            labels: [ //liste des intitulés: présents, congés, arrêts => légende
+            labels: [ //liste des intitulés: présents, congés => légende
                 'Présents',
                 'Absents',
             ],
-            datasets: [{ //tableau associatif avec les propriétés du graphique type donut
+            datasets: [{ //tableau associatif avec les propriétés du graphique type doughnut
                 label: 'Répartition des effectifs', //String => titre du graphique
                 <?php 
-                $pres = getEmployeePresent();
-                $abs = getEmployeeAbsent();
+                $pres = getEmployeePresent();//liste : somme des employés présents
+                $abs = getEmployeeAbsent();//liste : somme des employés absents
                 ?>
-                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], //liste => présents, absents (int)
-                backgroundColor: [ // liste => couleur des labels
+                data: [<?=$pres["count(present)"]?>, <?=$abs["count(present)"]?>], 
+                backgroundColor: [ // couleur des labels
                     'rgb(255, 99, 132)',
                     'rgb(54, 162, 235)'                    
                 ],
