@@ -6,7 +6,7 @@
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
 <main class="w-full flex-grow p-6">
 
-<div class="text-left"><p class="text-3xl ...">Employé(s) disponible(s) </p><br>
+<div class="text-left"><p class="text-3xl ...">Employés disponibles </p><br>
 </div>
     
     <!-- Big container -->
