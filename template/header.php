@@ -4,9 +4,9 @@
         <header class="w-full items-center bg-white py-2 px-6 sm:flex">
             <div class="w-1/2"></div>
             <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
-                <button class="bg-gray-200 px-5 py-2 text-gray-600 text-sm shadow-sm font-medium tracking-wider border rounded-lg hover:shadow-lg hover:bg-gray-300">Déconnexion
+                <a href="http://localhost:9494/dashboard" class="bg-gray-200 px-5 py-2 text-gray-600 text-sm shadow-sm font-medium tracking-wider border rounded-lg hover:shadow-lg hover:bg-gray-300">Déconnexion
                     <i class="fas fa-sign-out-alt ml-1"></i>
-                </button>
+                </a>
             </div>
         </header>
 
@@ -26,7 +26,7 @@
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
-                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="http://localhost:9494/employees" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-user-tie mr-3"></i>
                     Employés
                 </a>
@@ -38,7 +38,7 @@
                     <i class="fas fa-calendar mr-3"></i>
                     Planning
                 </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="http://localhost:9494/logout" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-sign-out-alt mr-3"></i>
                     Déconnexion
                 </a>

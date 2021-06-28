@@ -32,9 +32,7 @@ class DAOEmployee extends DAO{
             FROM mydb.employee
             INNER JOIN employee_operation
             ON mydb.employee.id = employee_operation.employee_id
-            WHERE employee_operation.present = 1
-            ;
-            
+            WHERE employee_operation.present = 1;
             "
             )->fetchAll(PDO::FETCH_CLASS, "\\BWB\\Framework\\mvc\\models\\EmployeeModel");
     }

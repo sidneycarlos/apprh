@@ -1,8 +1,6 @@
 {
     "/": "DashboardController:dashboard",
     "/test": "DefaultController:test",
-    "/login": "DefaultController:login",
-    "/logout": "DefaultController:logout",
     "/token": "DefaultController:token",
     "/json": "DefaultController:getJSON",
     "/api/default":{
@@ -22,5 +20,8 @@
     "/employees":"EmployeeController:getEmployees",
     "/operations":"OperationController:getOperations",
     "/teams":"TeamController:getTeams",
-    "/staff":"StaffController:getStaff"
+    "/staff":"StaffController:getStaff",
+    "/callback":"AuthenticationController:callback",
+    "/login": "AuthenticationController:signin",
+    "/logout": "AuthenticationController:logout"
 }
