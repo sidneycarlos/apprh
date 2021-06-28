@@ -48,3 +48,5 @@
             </button> -->
         </header>
         <!--END HEADER-->
+
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
