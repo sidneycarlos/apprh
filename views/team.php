@@ -5,7 +5,7 @@
 
 <!-- INSÉRER SON CONTENU DANS LE MAIN -->
 <main class="w-full flex-grow p-6">
-<div class="text-left"><p class="text-3xl ..."> Opération(s) en cours </p><br>
+<div class="text-left"><p class="text-3xl ..."> Opérations en cours </p><br>
 </div>
 
     
