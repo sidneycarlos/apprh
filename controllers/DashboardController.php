@@ -2,10 +2,10 @@
 
 namespace BWB\Framework\mvc\controllers;
 
-use BWB\Framework\mvc\Controller;
+use BWB\Framework\mvc\controllers\SecurizedController;
 use BWB\Framework\mvc\dao\DAODashboard;
 
-class DashboardController extends Controller
+class DashboardController extends SecurizedController
 {
     function __construct()
     {
